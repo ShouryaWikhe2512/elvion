@@ -1,27 +1,19 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   // Track scroll position
-  if (typeof window !== 'undefined') {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10)
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll)
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }
-  }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <motion.nav

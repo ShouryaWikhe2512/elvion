@@ -92,8 +92,7 @@ export function CardBody({ children, className = '' }: CardBodyProps) {
 
 export function CardItem({ as: Component = 'div', children, className = '', translateZ = 0 }: CardItemProps) {
   return (
-    <motion.div
-      as={Component as any}
+    <Component
       className={className}
       style={{
         transformStyle: 'preserve-3d',
@@ -101,6 +100,6 @@ export function CardItem({ as: Component = 'div', children, className = '', tran
       }}
     >
       {children}
-    </motion.div>
+    </Component>
   )
 }
