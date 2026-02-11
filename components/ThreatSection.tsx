@@ -1,45 +1,51 @@
-'use client'
+"use client";
 
-import React from "react"
+import React from "react";
 
-import { motion } from 'framer-motion'
-import { DollarSign, TrendingUp, Layers, ScanFace } from 'lucide-react'
+import { motion } from "framer-motion";
+import {
+  DollarSign,
+  TrendingUp,
+  Layers,
+  ScanFace,
+  IndianRupee,
+} from "lucide-react";
 
 interface ThreatCard {
-  number: string
-  description: string
-  icon: React.ReactNode
-  severity: 'critical' | 'high' | 'extreme'
+  number: string;
+  description: string;
+  icon: React.ReactNode;
+  severity: "critical" | "high" | "extreme";
 }
 
 const threatData: ThreatCard[] = [
   {
-    number: '₹22,845 Cr',
-    description: 'Lost in cyber fraud annually',
-    icon: <DollarSign className="w-7 h-7" strokeWidth={1.5} />,
-    severity: 'critical',
+    number: "₹22,845 Cr",
+    description: "Lost in cyber fraud annually",
+    icon: <IndianRupee className="w-7 h-7" strokeWidth={1.5} />,
+    severity: "critical",
   },
   {
-    number: '40-50%',
-    description: 'YoY growth in AI-generated phishing attacks',
+    number: "40-50%",
+    description: "YoY growth in AI-generated phishing attacks",
     icon: <TrendingUp className="w-7 h-7" strokeWidth={1.5} />,
-    severity: 'high',
+    severity: "high",
   },
   {
-    number: 'Multi-Channel Attacks',
+    number: "Multi-Channel Attacks",
     description:
-      'Email, WhatsApp, Telegram, voice calls, and deepfake video — everywhere at once.',
+      "Email, WhatsApp, Telegram, voice calls, and deepfake video — everywhere at once.",
     icon: <Layers className="w-7 h-7" strokeWidth={1.5} />,
-    severity: 'extreme',
+    severity: "extreme",
   },
   {
-    number: 'Humans Can’t Detect AI',
+    number: "Humans Can’t Detect AI",
     description:
-      'Synthetic voices and personas are now indistinguishable in real-time interactions.',
+      "Synthetic voices and personas are now indistinguishable in real-time interactions.",
     icon: <ScanFace className="w-7 h-7" strokeWidth={1.5} />,
-    severity: 'extreme',
+    severity: "extreme",
   },
-]
+];
 
 export function ThreatSection() {
   return (
@@ -57,7 +63,7 @@ export function ThreatSection() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           <motion.span
             className="text-primary text-sm uppercase tracking-widest font-semibold mb-4 block font-cinzel"
@@ -72,7 +78,8 @@ export function ThreatSection() {
             The New Phishing Reality
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            AI has removed cost, language, and scale barriers. The result is more attacks, more believable personas, and faster fraud.
+            AI has removed cost, language, and scale barriers. The result is
+            more attacks, more believable personas, and faster fraud.
           </p>
         </motion.div>
 
@@ -84,7 +91,7 @@ export function ThreatSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              viewport={{ once: true, margin: '-100px' }}
+              viewport={{ once: true, margin: "-100px" }}
               className="group relative"
             >
               <motion.div
@@ -135,5 +142,5 @@ export function ThreatSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

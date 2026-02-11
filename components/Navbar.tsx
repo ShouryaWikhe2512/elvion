@@ -1,26 +1,27 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Track scroll position
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10)
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
 
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/80 backdrop-blur-sm border-b border-primary/10'
-          : 'bg-transparent'
+          ? "bg-background/80 backdrop-blur-sm border-b border-primary/10"
+          : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -28,22 +29,35 @@ export function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <motion.div
-          className="text-2xl font-black text-primary tracking-tight"
-          whileHover={{ scale: 1.05 }}
-        >
-          {'<'} PhishermanAI {'>'}
+        <motion.div className="flex items-center" whileHover={{ scale: 1.05 }}>
+          <Image
+            src="/Screenshot_2026-02-11_150059-removebg-preview (1).png"
+            alt="Phisherman AI logo"
+            width={220}
+            height={60}
+            priority
+            className="h-12 w-auto"
+          />
         </motion.div>
 
         {/* Navigation links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#threat" className="text-sm text-muted-foreground hover:text-primary transition">
+          <a
+            href="#threat"
+            className="text-sm text-muted-foreground hover:text-primary transition"
+          >
             The Threat
           </a>
-          <a href="#defense" className="text-sm text-muted-foreground hover:text-primary transition">
+          <a
+            href="#defense"
+            className="text-sm text-muted-foreground hover:text-primary transition"
+          >
             Our Defense
           </a>
-          <a href="#market" className="text-sm text-muted-foreground hover:text-primary transition">
+          <a
+            href="#market"
+            className="text-sm text-muted-foreground hover:text-primary transition"
+          >
             Market
           </a>
         </div>
@@ -58,5 +72,5 @@ export function Navbar() {
         </motion.button>
       </div>
     </motion.nav>
-  )
+  );
 }

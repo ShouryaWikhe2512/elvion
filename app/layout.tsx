@@ -11,7 +11,7 @@ const _cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel" });
 export const metadata: Metadata = {
   title: "PhishermanAI - Cybersecurity Firewall",
   description:
-    "The Upside Down is Real. AI-powered cybersecurity defense against phishing, deepfakes, and synthetic threats.",
+    "When AI Lies, We Detect. AI-powered cybersecurity defense against phishing, deepfakes, and synthetic threats.",
   generator: "v0.app",
   openGraph: {
     title: "PhishermanAI - Your Digital Firewall",
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={_cinzel.variable}>
+    <html lang="en" className={_cinzel.variable} suppressHydrationWarning>
       <body className="font-sans antialiased" suppressHydrationWarning>
         {children}
       </body>

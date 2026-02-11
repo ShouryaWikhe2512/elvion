@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Zap, Cpu, Shield } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Zap, Cpu, Shield } from "lucide-react";
 
 export function Hero() {
   const floatingParticles = Array.from({ length: 40 }).map((_, i) => ({
@@ -10,7 +10,7 @@ export function Hero() {
     top: Math.random() * 100,
     delay: Math.random() * 3,
     duration: 8 + Math.random() * 4,
-  }))
+  }));
 
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center bg-background overflow-hidden">
@@ -20,10 +20,23 @@ export function Hero() {
       </div>
 
       {/* Animated background grid - more subtle */}
-      <svg className="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="absolute inset-0 w-full h-full opacity-5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <defs>
-          <pattern id="hero-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(220, 38, 38, 0.4)" strokeWidth="0.5" />
+          <pattern
+            id="hero-grid"
+            width="60"
+            height="60"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 60 0 L 0 0 0 60"
+              fill="none"
+              stroke="rgba(220, 38, 38, 0.4)"
+              strokeWidth="0.5"
+            />
             <circle cx="60" cy="60" r="0.5" fill="rgba(220, 38, 38, 0.3)" />
           </pattern>
         </defs>
@@ -48,7 +61,7 @@ export function Hero() {
             duration: particle.duration,
             delay: particle.delay,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
         />
       ))}
@@ -63,7 +76,7 @@ export function Hero() {
         transition={{
           duration: 8,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}
       />
       <motion.div
@@ -75,7 +88,7 @@ export function Hero() {
         transition={{
           duration: 10,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           delay: 1,
         }}
       />
@@ -94,9 +107,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          <p className="font-cinzel text-primary text-sm md:text-base font-semibold tracking-widest uppercase letter-spacing">
-            The Digital Firewall Awakens
-          </p>
+          <p className="font-cinzel text-primary text-sm md:text-base font-semibold tracking-widest uppercase letter-spacing"></p>
         </motion.div>
 
         {/* Main headline with professional horror feel */}
@@ -112,24 +123,25 @@ export function Hero() {
               animate={{
                 opacity: [1, 0.9, 1],
                 textShadow: [
-                  '0 0 40px rgba(220, 38, 38, 0.4), 0 0 80px rgba(220, 38, 38, 0.2)',
-                  '0 0 60px rgba(220, 38, 38, 0.6), 0 0 120px rgba(220, 38, 38, 0.3)',
-                  '0 0 40px rgba(220, 38, 38, 0.4), 0 0 80px rgba(220, 38, 38, 0.2)',
+                  "0 0 40px rgba(220, 38, 38, 0.4), 0 0 80px rgba(220, 38, 38, 0.2)",
+                  "0 0 60px rgba(220, 38, 38, 0.6), 0 0 120px rgba(220, 38, 38, 0.3)",
+                  "0 0 40px rgba(220, 38, 38, 0.4), 0 0 80px rgba(220, 38, 38, 0.2)",
                 ],
               }}
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: 'easeInOut',
+                ease: "easeInOut",
               }}
               style={{
-                background: 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 50%, #ffffff 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
+                background:
+                  "linear-gradient(135deg, #ffffff 0%, #f5f5f5 50%, #ffffff 100%)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
               }}
             >
-              The Upside Down
+              When AI Lies,
             </motion.span>
 
             <motion.span
@@ -137,18 +149,18 @@ export function Hero() {
               animate={{
                 opacity: [0.9, 1, 0.9],
                 textShadow: [
-                  '0 0 30px rgba(220, 38, 38, 0.5), 0 0 60px rgba(220, 38, 38, 0.3), inset 0 0 30px rgba(220, 38, 38, 0.1)',
-                  '0 0 50px rgba(220, 38, 38, 0.8), 0 0 100px rgba(220, 38, 38, 0.5), inset 0 0 40px rgba(220, 38, 38, 0.2)',
-                  '0 0 30px rgba(220, 38, 38, 0.5), 0 0 60px rgba(220, 38, 38, 0.3), inset 0 0 30px rgba(220, 38, 38, 0.1)',
+                  "0 0 30px rgba(220, 38, 38, 0.5), 0 0 60px rgba(220, 38, 38, 0.3), inset 0 0 30px rgba(220, 38, 38, 0.1)",
+                  "0 0 50px rgba(220, 38, 38, 0.8), 0 0 100px rgba(220, 38, 38, 0.5), inset 0 0 40px rgba(220, 38, 38, 0.2)",
+                  "0 0 30px rgba(220, 38, 38, 0.5), 0 0 60px rgba(220, 38, 38, 0.3), inset 0 0 30px rgba(220, 38, 38, 0.1)",
                 ],
               }}
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: 'easeInOut',
+                ease: "easeInOut",
               }}
             >
-              Is Real
+              We Detect
             </motion.span>
           </h1>
         </motion.div>
@@ -160,9 +172,12 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-lg md:text-xl text-muted-foreground mb-12 text-balance max-w-3xl mx-auto leading-relaxed"
         >
-          Phishing evolved. Threats now wield{' '}
-          <span className="text-primary font-semibold">synthetic voices, deepfakes, and AI personas</span>. 
-          Your defense must evolve faster. We weaponize intelligence against intelligence.
+          Phishing evolved. Threats now wield{" "}
+          <span className="text-primary font-semibold">
+            synthetic voices, deepfakes, and AI personas
+          </span>
+          . Your defense must evolve faster. We weaponize intelligence against
+          intelligence.
         </motion.p>
 
         {/* CTA Buttons with enhanced styling */}
@@ -175,7 +190,8 @@ export function Hero() {
           <motion.button
             whileHover={{
               scale: 1.05,
-              boxShadow: '0 0 50px rgba(220, 38, 38, 0.8), 0 0 100px rgba(220, 38, 38, 0.4)',
+              boxShadow:
+                "0 0 50px rgba(220, 38, 38, 0.8), 0 0 100px rgba(220, 38, 38, 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
             className="px-10 py-4 bg-primary text-primary-foreground font-cinzel font-semibold rounded-xl glow-red transition-all duration-300 text-lg"
@@ -184,8 +200,9 @@ export function Hero() {
           </motion.button>
           <motion.button
             whileHover={{
-              borderColor: 'rgba(220, 38, 38, 0.8)',
-              boxShadow: '0 0 30px rgba(220, 38, 38, 0.3), inset 0 0 20px rgba(220, 38, 38, 0.05)',
+              borderColor: "rgba(220, 38, 38, 0.8)",
+              boxShadow:
+                "0 0 30px rgba(220, 38, 38, 0.3), inset 0 0 20px rgba(220, 38, 38, 0.05)",
             }}
             whileTap={{ scale: 0.95 }}
             className="px-10 py-4 border-2 border-primary text-primary font-cinzel font-semibold rounded-xl hover:bg-primary/10 transition-all duration-300 text-lg"
@@ -202,20 +219,25 @@ export function Hero() {
           className="flex flex-wrap justify-center gap-8 md:gap-16 text-sm"
         >
           {[
-            { label: 'Real-Time Detection', icon: Zap },
-            { label: 'AI-Powered Defense', icon: Cpu },
-            { label: 'Zero-Day Protected', icon: Shield },
+            { label: "Real-Time Detection", icon: Zap },
+            { label: "AI-Powered Defense", icon: Cpu },
+            { label: "Zero-Day Protected", icon: Shield },
           ].map((item, i) => {
-            const IconComponent = item.icon
+            const IconComponent = item.icon;
             return (
               <div
                 key={i}
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
-                <IconComponent className="w-5 h-5 text-primary" strokeWidth={1.5} />
-                <span className="font-cinzel text-xs uppercase tracking-wider">{item.label}</span>
+                <IconComponent
+                  className="w-5 h-5 text-primary"
+                  strokeWidth={1.5}
+                />
+                <span className="font-cinzel text-xs uppercase tracking-wider">
+                  {item.label}
+                </span>
               </div>
-            )
+            );
           })}
         </motion.div>
       </motion.div>
@@ -226,7 +248,9 @@ export function Hero() {
         animate={{ y: [0, 12, 0] }}
         transition={{ duration: 2.5, repeat: Infinity }}
       >
-        <p className="text-primary text-xs uppercase tracking-widest font-cinzel mb-3">Descend Further</p>
+        <p className="text-primary text-xs uppercase tracking-widest font-cinzel mb-3">
+          Descend Further
+        </p>
         <motion.svg
           className="w-6 h-6 text-primary"
           fill="none"
@@ -235,9 +259,14 @@ export function Hero() {
           animate={{ opacity: [0.6, 1, 0.6] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
         </motion.svg>
       </motion.div>
     </div>
-  )
+  );
 }
