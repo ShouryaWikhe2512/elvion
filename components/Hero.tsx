@@ -141,7 +141,7 @@ export function Hero() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              When AI Lies,
+              when AI lies
             </motion.span>
 
             <motion.span
@@ -160,7 +160,7 @@ export function Hero() {
                 ease: "easeInOut",
               }}
             >
-              We Detect
+              we detect
             </motion.span>
           </h1>
         </motion.div>
@@ -248,9 +248,7 @@ export function Hero() {
         animate={{ y: [0, 12, 0] }}
         transition={{ duration: 2.5, repeat: Infinity }}
       >
-        <p className="text-primary text-xs uppercase tracking-widest font-cinzel mb-3">
-          Descend Further
-        </p>
+        <p className="text-primary text-xs uppercase tracking-widest font-cinzel mb-3"></p>
         <motion.svg
           className="w-6 h-6 text-primary"
           fill="none"
